@@ -1,0 +1,52 @@
+{
+  "name": "Habit",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the habit"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly"
+      ],
+      "default": "daily",
+      "description": "How often the habit should be done"
+    },
+    "current_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Current consecutive streak"
+    },
+    "longest_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Longest streak ever achieved"
+    },
+    "total_completions": {
+      "type": "number",
+      "default": 0,
+      "description": "Total times completed"
+    },
+    "last_completed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date last completed"
+    },
+    "reminder_time": {
+      "type": "string",
+      "description": "Time for reminder notification (HH:MM format)"
+    },
+    "color": {
+      "type": "string",
+      "default": "sage",
+      "description": "Color theme for the habit"
+    }
+  },
+  "required": [
+    "name",
+    "frequency"
+  ]
+}
